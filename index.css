@@ -180,6 +180,44 @@ display: flex;
   }
 }
 
+.gallery__img-wrapper {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.gallery__img-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+
+.gallery__img-wrapper:nth-child(1)::after {
+  top: 10px;
+  right: 20px;
+}
+
+.gallery__img-wrapper:nth-child(2)::after {
+  bottom: 10px;
+  right: 10px;
+}
+
+.gallery__img-wrapper:nth-child(3)::after {
+  top: 15px;
+  right: 15px;
+}
+
+.gallery__img-wrapper:nth-child(4)::after {
+  bottom: 15px;
+  left: 15px;
+}
+
+
 .gallery__img-wrapper:nth-child(1) { transform: rotate(-4deg); }
 .gallery__img-wrapper:nth-child(2) { transform: rotate(3deg); }
 .gallery__img-wrapper:nth-child(3) { transform: rotate(-2deg); }
